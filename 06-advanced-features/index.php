@@ -130,3 +130,15 @@ class ShopProduct3
     use PriceUtilities, PriceUtilities2;
 }
 
+/**
+ * Managing method name Conflicts with insteadof
+ */
+
+class UtilityService extends UtilityService
+{
+    use PriceUtilities;
+    use TaxTools {
+        TaxTools::calculateTax insteadOf PriceUtilities;
+    }
+}
+
