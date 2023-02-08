@@ -6,9 +6,8 @@
 */
 class ShopProduct
 {
-    
     public function __construct(
-        public $title = "",
+        public string $title = '',
         private $name = "",
         private $age = 0
     ){
@@ -25,7 +24,7 @@ class ShopProduct
     }
 }
 
-$shop = new ShopProduct(title: "CP Shop", age: 35);
+$shop = new ShopProduct("CP Shop",'asd',35);
 echo $shop->getTotalInfo();
 
 
